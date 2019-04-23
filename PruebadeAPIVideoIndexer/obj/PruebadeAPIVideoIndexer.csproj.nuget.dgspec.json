@@ -1,24 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sergio.flores\\Desktop\\PruebadeAPIVideoIndexer\\PruebadeAPIVideoIndexer\\PruebadeAPIVideoIndexer.csproj": {}
+    "C:\\Users\\serch\\source\\repos\\PruebadeAPIVideoIndexer\\PruebadeAPIVideoIndexer\\PruebadeAPIVideoIndexer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sergio.flores\\Desktop\\PruebadeAPIVideoIndexer\\PruebadeAPIVideoIndexer\\PruebadeAPIVideoIndexer.csproj": {
+    "C:\\Users\\serch\\source\\repos\\PruebadeAPIVideoIndexer\\PruebadeAPIVideoIndexer\\PruebadeAPIVideoIndexer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sergio.flores\\Desktop\\PruebadeAPIVideoIndexer\\PruebadeAPIVideoIndexer\\PruebadeAPIVideoIndexer.csproj",
+        "projectUniqueName": "C:\\Users\\serch\\source\\repos\\PruebadeAPIVideoIndexer\\PruebadeAPIVideoIndexer\\PruebadeAPIVideoIndexer.csproj",
         "projectName": "PruebadeAPIVideoIndexer",
-        "projectPath": "C:\\Users\\sergio.flores\\Desktop\\PruebadeAPIVideoIndexer\\PruebadeAPIVideoIndexer\\PruebadeAPIVideoIndexer.csproj",
-        "packagesPath": "C:\\Users\\sergio.flores\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sergio.flores\\Desktop\\PruebadeAPIVideoIndexer\\PruebadeAPIVideoIndexer\\obj\\",
+        "projectPath": "C:\\Users\\serch\\source\\repos\\PruebadeAPIVideoIndexer\\PruebadeAPIVideoIndexer\\PruebadeAPIVideoIndexer.csproj",
+        "packagesPath": "C:\\Users\\serch\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\serch\\source\\repos\\PruebadeAPIVideoIndexer\\PruebadeAPIVideoIndexer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
+          "C:\\ProgramData\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\sergio.flores\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\serch\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp2.1"
@@ -42,7 +44,6 @@
         "netcoreapp2.1": {
           "dependencies": {
             "Microsoft.NETCore.App": {
-              "suppressParent": "All",
               "target": "Package",
               "version": "[2.1.0, )",
               "autoReferenced": true
