@@ -1,0 +1,11 @@
+C:\Users\serch\source\repos\PruebadeAPIVideoIndexer\PruebadeAPIVideoIndexer\bin\Debug\netcoreapp2.1\PruebadeAPIVideoIndexer.deps.json
+C:\Users\serch\source\repos\PruebadeAPIVideoIndexer\PruebadeAPIVideoIndexer\bin\Debug\netcoreapp2.1\PruebadeAPIVideoIndexer.runtimeconfig.json
+C:\Users\serch\source\repos\PruebadeAPIVideoIndexer\PruebadeAPIVideoIndexer\bin\Debug\netcoreapp2.1\PruebadeAPIVideoIndexer.runtimeconfig.dev.json
+C:\Users\serch\source\repos\PruebadeAPIVideoIndexer\PruebadeAPIVideoIndexer\bin\Debug\netcoreapp2.1\PruebadeAPIVideoIndexer.dll
+C:\Users\serch\source\repos\PruebadeAPIVideoIndexer\PruebadeAPIVideoIndexer\bin\Debug\netcoreapp2.1\PruebadeAPIVideoIndexer.pdb
+C:\Users\serch\source\repos\PruebadeAPIVideoIndexer\PruebadeAPIVideoIndexer\obj\Debug\netcoreapp2.1\PruebadeAPIVideoIndexer.csprojAssemblyReference.cache
+C:\Users\serch\source\repos\PruebadeAPIVideoIndexer\PruebadeAPIVideoIndexer\obj\Debug\netcoreapp2.1\PruebadeAPIVideoIndexer.csproj.CoreCompileInputs.cache
+C:\Users\serch\source\repos\PruebadeAPIVideoIndexer\PruebadeAPIVideoIndexer\obj\Debug\netcoreapp2.1\PruebadeAPIVideoIndexer.AssemblyInfoInputs.cache
+C:\Users\serch\source\repos\PruebadeAPIVideoIndexer\PruebadeAPIVideoIndexer\obj\Debug\netcoreapp2.1\PruebadeAPIVideoIndexer.AssemblyInfo.cs
+C:\Users\serch\source\repos\PruebadeAPIVideoIndexer\PruebadeAPIVideoIndexer\obj\Debug\netcoreapp2.1\PruebadeAPIVideoIndexer.dll
+C:\Users\serch\source\repos\PruebadeAPIVideoIndexer\PruebadeAPIVideoIndexer\obj\Debug\netcoreapp2.1\PruebadeAPIVideoIndexer.pdb
