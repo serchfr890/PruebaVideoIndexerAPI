@@ -25,14 +25,15 @@ namespace PruebadeAPIVideoIndexer
             return await responseMessage.Content.ReadAsStringAsync();
         }
 
-        public async void SearchVideos(string accessToken)
+        public async Task SearchVideos(string accessToken)
         {
-            Console.WriteLine(accessToken);
             using (var client = new HttpClient())
             {
+                Console.WriteLine(accessToken);
                 var queryString = HttpUtility.ParseQueryString(string.Empty);
                 // Request parameters
-                string text = "funciones cuadraticas";
+                //accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJBY2NvdW50SWQiOiJiYzEyOWI5ZS1lZTY3LTQ2ODYtYmE0MC03NmYwNTFhNTkxMWYiLCJBbGxvd0VkaXQiOiJGYWxzZSIsIkV4dGVybmFsVXNlcklkIjoiNTgyYWZkNjdiNjhiYWQzMCIsIlVzZXJUeXBlIjoiTWljcm9zb2Z0IiwiaXNzIjoiaHR0cHM6Ly93d3cudmlkZW9pbmRleGVyLmFpLyIsImF1ZCI6Imh0dHBzOi8vd3d3LnZpZGVvaW5kZXhlci5haS8iLCJleHAiOjE1NTYwNjA0NTUsIm5iZiI6MTU1NjA1NjU1NX0.Xk6c9QLxOqpc9hUfB19psZr9eNYO-pXrGlxiJSWiBzI";    
+                string text = "integrales";
                 queryString["query"] = text;
                 queryString["pageSize"] = "25";
                 queryString["skip"] = "0";
@@ -40,6 +41,9 @@ namespace PruebadeAPIVideoIndexer
                 var uri = "https://api.videoindexer.ai/" + LOCATION + "/Accounts/" + ACCOUNTID + "/Videos/Search?" + queryString;
                 var responseMessage = await client.GetAsync(uri);
                 var result = await responseMessage.Content.ReadAsStringAsync();
+                var borrar = JsonConvert.DeserializeObject(result);
+                Console.WriteLine(borrar);
+
                 var jsonResult = JsonConvert.DeserializeObject<VideoSearchResult>(result);
 
                 queryString.Clear();
@@ -56,8 +60,21 @@ namespace PruebadeAPIVideoIndexer
                     Console.WriteLine("URL: " + "https://www.videoindexer.ai/accounts/bc129b9e-ee67-4686-ba40-76f051a5911f/videos/" + item.id + "/?" + queryStringT);
                     Console.WriteLine("Thumbnaill: " + "https://api.videoindexer.ai/" + LOCATION + "/Accounts/" + ACCOUNTID + "/Videos/" + item.id + "/Thumbnails/" + item.thumbnailId + "?" + queryString);
                     Console.WriteLine("Text: " + item.searchMatches[0].text);
+                    Console.WriteLine(Task.Run(() => GetVideoSourceFileDownloadUrl(accessToken, item.id)));
                 }
             }
+        }
+
+        public static async Task<string> GetVideoSourceFileDownloadUrl(string accessToken, string videoId)
+        {
+            var client = new HttpClient();
+            var queryString = HttpUtility.ParseQueryString(string.Empty);
+            //queryString["accessToken"] = accessToken;
+            //queryString["allowEdit"] = "true";
+            var uri = $"https://api.videoindexer.ai/{LOCATION}/Accounts/{ACCOUNTID}/Videos/{videoId}/SourceFile/DownloadUrl/";
+            var response = await client.GetAsync(uri);
+            Console.WriteLine(response.Content.ReadAsStringAsync());
+            return "";
         }
     }
 }
