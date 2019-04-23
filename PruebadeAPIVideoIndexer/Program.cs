@@ -15,6 +15,7 @@ namespace PruebadeAPIVideoIndexer
         //private static string accessToken;
         static void Main(string[] args)
         {
+
             VideoIndexerMethods videoIndexerMethods = new VideoIndexerMethods();
             var result = Task.Run(() => videoIndexerMethods.GetAccountAccesTokenAsync());
             result.Wait();
