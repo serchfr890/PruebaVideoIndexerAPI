@@ -32,7 +32,7 @@ namespace PruebadeAPIVideoIndexer
             {
                 var queryString = HttpUtility.ParseQueryString(string.Empty);
                 // Request parameters
-                string text = "valor";
+                string text = "funciones cuadraticas";
                 queryString["query"] = text;
                 queryString["pageSize"] = "25";
                 queryString["skip"] = "0";
@@ -45,13 +45,17 @@ namespace PruebadeAPIVideoIndexer
                 queryString.Clear();
                 queryString["format"] = "Jpeg";
                 queryString["accessToken"] = accessToken;
+                var queryStringT = HttpUtility.ParseQueryString(string.Empty);
+                
                 Console.WriteLine("Se encontró '{0}' en los siguientes videos: ", text);
                 foreach (var item in jsonResult.results)
                 {
                     Console.WriteLine("\n\nNombre: " + item.name);
                     Console.WriteLine("Tiempo: " + item.searchMatches[0].startTime);
-                    Console.WriteLine("URL: " + "https://www.videoindexer.ai/accounts/bc129b9e-ee67-4686-ba40-76f051a5911f/videos/" + item.id + "/");
+                    queryStringT["t"] = Convert.ToString(Math.Round(TimeSpan.Parse((String)item.searchMatches[0].startTime).TotalSeconds));
+                    Console.WriteLine("URL: " + "https://www.videoindexer.ai/accounts/bc129b9e-ee67-4686-ba40-76f051a5911f/videos/" + item.id + "/?" + queryStringT);
                     Console.WriteLine("Thumbnaill: " + "https://api.videoindexer.ai/" + LOCATION + "/Accounts/" + ACCOUNTID + "/Videos/" + item.id + "/Thumbnails/" + item.thumbnailId + "?" + queryString);
+                    Console.WriteLine("Text: " + item.searchMatches[0].text);
                 }
             }
         }
