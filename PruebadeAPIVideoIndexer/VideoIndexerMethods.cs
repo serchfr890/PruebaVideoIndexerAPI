@@ -1,32 +1,19 @@
-﻿using System;
-using System.Net.Http.Headers;
-using System.Text;
+﻿using Newtonsoft.Json;
+using System;
+using System.Collections.Generic;
 using System.Net.Http;
+using System.Text;
+using System.Threading.Tasks;
 using System.Web;
-using System.IO;
-using System.Dynamic;
-using Newtonsoft.Json;
-using System.Threading.Tasks; 
 
 namespace PruebadeAPIVideoIndexer
 {
-    class Program
+    class VideoIndexerMethods
     {
         private static string OCP_APIM_SUBCRIPTION_KEY = "Ocp-Apim-Subscription-Key";
         private static string SUBSCRIPTION_KEY = "9910bef53a484b1ba9eb9961f8815d64";
         private static string LOCATION = "trial";
         private static string ACCOUNTID = "bc129b9e-ee67-4686-ba40-76f051a5911f";
-
-        static void Main(string[] args)
-        {
-            //string accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJBY2NvdW50SWQiOiJiYzEyOWI5ZS1lZTY3LTQ2ODYtYmE0MC03NmYwNTFhNTkxMWYiLCJBbGxvd0VkaXQiOiJGYWxzZSIsIkV4dGVybmFsVXNlcklkIjoiNTgyYWZkNjdiNjhiYWQzMCIsIlVzZXJUeXBlIjoiTWljcm9zb2Z0IiwiaXNzIjoiaHR0cHM6Ly93d3cudmlkZW9pbmRleGVyLmFpLyIsImF1ZCI6Imh0dHBzOi8vd3d3LnZpZGVvaW5kZXhlci5haS8iLCJleHAiOjE1NTU5NzE3NDksIm5iZiI6MTU1NTk2Nzg0OX0.0PRBjM5gxwb_iibMPApsKo8vG_uZEyLDoTA0w-hJLFM";
-            var result = Task.Run(() => GetAccountAccesTokenAsync());
-            result.Wait();
-            string accessToken = result.Result.Trim('\"');
-            SearchVideos(accessToken);
-            Console.WriteLine("Hit ENTER to exit...");
-            Console.ReadKey();
-        }
         static async Task<string> GetAccountAccesTokenAsync()
         {
             var client = new HttpClient();
@@ -63,6 +50,5 @@ namespace PruebadeAPIVideoIndexer
                 }
             }
         }
-
     }
 }
